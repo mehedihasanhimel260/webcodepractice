@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="this.innerHTML='already Clicked'">Click Me</button>
+    <br>
+
+    <button onclick="demo(this)">Click Me</button>
+<br>
+<button type="button"
+onclick="document.getElementById('Date').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="Date"></p>
+
+<button onclick="date2(this)">Click Me for Date</button>
+<h2 id="date2"> </h2>
+
+<div>
+    <input type="number" id="price"/>
+    <input type="number" onblur="productPrice()" id="quntity"/>
+    <input type="number" id="total"/>
+
+</div>
+    <script>
+        function demo(test) {
+            test.innerHTML="already Clicked"
+        };
+        function date2(clickforDate) {
+            clickforDate.innerHTML=Date();
+        };
+        function productPrice() {
+            let price = document.getElementById('price').value;
+            let quntity = document.getElementById('quntity').value;
+            document.getElementById('total').value= price*quntity;
+        }
+
+    </script>
+
+</body>
+</html>
