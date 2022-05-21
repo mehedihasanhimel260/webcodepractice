@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MehediExpress</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark header-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand mb-0 h1" href="#">MehediExpress</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="age.html">Age</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+
+        </div>
+    </nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="index.html">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+        <div class="container">
+            <h2>Contact form</h2>
+            <form  name="demoForm" action="" onsubmit="return validateForm()">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Number:</label>
+                <input type="number" class="form-control" id="num" placeholder="Number" name="num">
+              </div>
+              <div class="form-group">
+                <label for="text">Text:</label>
+                <textarea type="text" class="form-control" id="text" placeholder="Test" name="Text"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+</footer>
+<script>
+    function validateForm() {
+        let x = document.forms["demoForm"]["email"].value;
+        let y= document.forms["demoForm"]["num"].value;
+        let z= document.forms["demoForm"]["text"].value;
+        if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    else if(y == ""){
+        
+        alert("Name must be filled out");
+        return false;
+    } else if(z == ""){
+        
+        alert("Name must be filled out");
+        return false;
+    }else{
+        alert("Submit Succesful");
+    }
+    }
+</script>
+
+
+</body>
+</html>
